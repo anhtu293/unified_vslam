@@ -14,12 +14,15 @@ mkdir -p build && cd build
 cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.x/modules ../opencv-4.x
 cmake --build .
 pkg-config --modversion opencv4
+
 ```
+
+- Install `eigen` following the [guide](https://eigen.tuxfamily.org/index.php?title=Main_Page#Download) (copy to `/usr/local/include/Eigen`) 
 
 
 # Compile
 ```bash
 cd test
-g++ -std=c++11 main.cpp -o main `pkg-config --cflags --libs opencv4`
+g++ -std=c++11 main.cpp -o main `pkg-config --cflags --libs opencv4` -I /usr/local/include/Eigen
 ```
 
