@@ -23,6 +23,6 @@ pkg-config --modversion opencv4
 # Compile
 ```bash
 cd test
-g++ -std=c++11 main.cpp -o main `pkg-config --cflags --libs opencv4` -I /usr/local/include/Eigen
+g++ -std=c++11 main.cpp -o main `pkg-config --cflags --libs opencv4` -I /usr/local/include/Eigen -lboost_filesystem
 ```
 

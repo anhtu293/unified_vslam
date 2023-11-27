@@ -25,6 +25,7 @@ namespace unified_slam::dataloaders{
             // setters
             void set_dataset_name(const std::string& dataset_name) { dataset_name_ = dataset_name; }
             void set_dataset_dir(const std::string& dir) { dataset_dir_ = dir; }
+            void set_dataset_items(const std::vector<std::map<std::string, std::string>> &items) { items_ = std::move(items); }
 
             // get item knowing index
             virtual unified_slam::components::Frame get_frame(const int& idx) const = 0;
